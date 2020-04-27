@@ -1,0 +1,15 @@
+// Mes fonts 
+@font-face { 	font-family: "nov"; 	src: url('../font/nov.otf'); } // Novecento wide (Police du cliant)
+@font-face { 	font-family: "hn"; 	src: url('../font/hn.ttf'); } // Helvetica Neue
+
+
+@import "scss/settings.scss"; 
+@import "scss/tools.scss"; 
+@import "scss/generic.scss"; 
+@import "scss/element.scss";
+@import "scss/objects/objects.scss"; 
+@import "scss/components/components.scss"; 
+@import "scss/utilitis.scss"; 
+
+//une note
+

@@ -1,0 +1,51 @@
+.index_button {
+    color: $tc;
+    text-decoration: none;
+    font-family: $hf;
+    padding: 0.5em 0.75em;
+    border: $tc solid 1.5px;
+    font-size: 2em;
+    transition: .2s;
+}
+
+.index_button:hover {
+    color: $hc;
+    border: $hc solid 1.5px;
+    transition: .2s;
+}
+
+.cta {
+    display: flex;
+    letter-spacing: 0.2em;
+    margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+        transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+
+    div{
+        width: 50%;
+        text-align: center;
+        position: relative;
+        right: 40px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+    .cta {
+        flex-direction: column;
+        position: relative;
+        top : -300px; 
+        div{
+            margin: 0px;
+            width: calc(100%);
+            position: relative;
+        }
+    }
+    .index_button {
+        border: $tc solid 1.3px;
+        font-size: 2em;
+    }
+
+    
+}

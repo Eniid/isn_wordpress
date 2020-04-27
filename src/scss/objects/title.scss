@@ -1,0 +1,60 @@
+@media screen and (min-width: 800px) {
+    
+    .hl {
+        position: fixed;
+        top : 2em; 
+        left : 2em; 
+    }
+
+    
+    .hi {
+        position: fixed;
+        top : 2em; 
+        right : 2em; 
+    }
+    
+    .hs {
+        position: fixed;
+        bottom : 2em; 
+        left : 2em; 
+    }
+    
+    .hn {
+        position: fixed;
+        bottom : 2em; 
+        right : 2em; 
+    }
+}
+
+
+//* CSS EN COMMUN AVEC TOUTES LES PAGES < 800px
+
+@media screen and (max-width: 800px) {
+
+    .hl {
+        position: fixed;
+        top : 1em; 
+        left : 1em; 
+    }
+
+    
+    .hi {
+        position: fixed;
+        top : 1em; 
+        right : 1em; 
+    }
+
+    .hs {
+        position: fixed;
+        bottom : 1em; 
+        left : 1em; 
+    }
+
+    .hn {
+        position: fixed;
+        bottom : 1em; 
+        right : 1em; 
+    }
+
+
+}
