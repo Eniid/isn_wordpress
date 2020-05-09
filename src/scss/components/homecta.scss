@@ -16,16 +16,37 @@
 
 .cta {
     display: flex;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100vh;
+    align-items: center;
     letter-spacing: 0.2em;
-    margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
-        transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+    //margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+    //transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
 
     div{
         width: 50%;
         text-align: center;
-        position: relative;
-        right: 40px;
+        height: 100px;
     }
+}
+
+
+@media screen and (min-width: 800px) {
+
+.photo_contenaire {
+    position: relative;
+    top: -75px;
+    left: 50px;
+}
+
+.bibli_contenaire {
+    position: relative;
+    top: 75px;
+    left: -50px;
+}
+
 }
 
 
@@ -34,12 +55,13 @@
 
     .cta {
         flex-direction: column;
-        position: relative;
-        top : -300px; 
+        justify-content: center;
+        text-align: center;
+        //position: relative;
+        //top : -300px; 
         div{
-            margin: 0px;
-            width: calc(100%);
-            position: relative;
+            width: auto;
+            font-size: .75rem;
         }
     }
     .index_button {

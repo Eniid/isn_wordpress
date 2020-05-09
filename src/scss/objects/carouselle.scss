@@ -1,0 +1,30 @@
+.carouselle {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 3rem;
+    img {
+        margin: 1rem;
+    }
+    img:hover {
+        transform: scale(1.1);
+    transform-origin: center center;
+    transition: .3s;
+    transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
+    }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+    .single_right {
+        max-width: 300px;
+    }
+
+    .single_contner {
+        margin: 0 0 0 20%;
+    }
+    
+
+}

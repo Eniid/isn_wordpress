@@ -25,3 +25,85 @@ wp_enqueue_style('dist.app', get_stylesheet_uri());
 if (function_exists( 'add_theme_support' )) {
     add_theme_support( 'post-thumbnails' );
 }
+
+
+
+
+//! pour le custom post_type 
+//* Photo! 
+add_action( 'init', 'isn_photo_postype' );
+
+function isn_photo_postype() {
+    $labels = array(
+        'name'                  => _x( 'Photographies', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Photographie', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Photographies', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Photographie', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Ajouter', 'textdomain' ),
+        'add_new_item'          => __( 'Ajouter une nouvelle expo', 'textdomain' ),
+        'new_item'              => __( 'Nouvelle expo', 'textdomain' ),
+        'edit_item'             => __( 'Editer l\'exp', 'textdomain' ),
+        'view_item'             => __( 'Voir l\'exp', 'textdomain' ),
+        'all_items'             => __( 'Voir toutes les expos', 'textdomain' ),
+    );
+
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'photographie' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+        'menu_icon'          => 'dashicons-camera',
+
+    );
+
+    register_post_type( 'photographie', $args );
+}
+
+
+
+//* Livres
+add_action( 'init', 'isn_bibli_postype' );
+
+function isn_bibli_postype() {
+    $labels = array(
+        'name'                  => _x( 'Bibliotheque', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Bibliothèque', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Bibliothèque', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Bibliothèque', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Ajouter', 'textdomain' ),
+        'add_new_item'          => __( 'Ajouter un nouveau livre', 'textdomain' ),
+        'new_item'              => __( 'Nouveau livre', 'textdomain' ),
+        'edit_item'             => __( 'Editer le livre', 'textdomain' ),
+        'view_item'             => __( 'Voir le livre', 'textdomain' ),
+        'all_items'             => __( 'Voir touts les livres', 'textdomain' ),
+    );
+
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'bibliotheque' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+        'menu_icon'          => 'dashicons-book',
+
+    );
+
+    register_post_type( 'bibliotheque', $args );
+}

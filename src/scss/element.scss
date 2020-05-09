@@ -23,6 +23,19 @@ h1 {
     font-size: 1.25em;
 }
 
+h2 {
+    font-family: $hf;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    color: $hc;
+    font-family: $hf;
+    font-size: 1em;
+    padding: 2em 0 1em;
+}
+
 button {
     background-color: $hc;
     padding: 1em;

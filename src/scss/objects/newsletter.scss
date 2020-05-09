@@ -4,7 +4,7 @@
     .newsletter {
         position: absolute;
         position: fixed;
-        right: -57px;
+        right: -73px;
         top : 150px;
         display: flex;
         transition: transform .9s ease-out;
@@ -20,8 +20,7 @@
         display: inline-block;
         padding: 10px 20px;
         transform: rotate(-90deg);
-        //letter-spacing: 0.2em;
-
+        letter-spacing: 0.2em;
         margin: 0;
     }
 
@@ -39,8 +38,8 @@
         position: absolute;
         font-size: 1em;
         padding: 2em;
-        top : -57px;
-        left: 99px;
+        top : -73px;
+        left: 115px;
         width: 250px;
     }
 
