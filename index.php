@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<p>teste <3</p>
+
 <?php 
             if ( have_posts() ): while ( have_posts() ): the_post(); ?>
             <article class="latest_articles_article_preview">   
@@ -9,6 +9,14 @@
                 </div>  
             </article>
         <?php endwhile; endif;?>
+
+        <div class="pages_contner">
+        <div class="right">
+            <p>Il n'y a rien à voir ici. Vous êtes perdu ? </p>
+            <a href="/" class="pages_cta">acceuil</a>
+        </div>
+        </div>
+
 
 
 <?php get_footer() ?>

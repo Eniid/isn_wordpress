@@ -1,0 +1,66 @@
+
+.scroll {
+    position: fixed;
+    right: 5rem;
+    top: 70%;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.scroll_bar {
+    position: fixed;
+    right: 0rem;
+    top: 71%;   
+    width: 1.5rem;
+    height: .4rem;
+    background-color: #fff;
+}
+
+
+.scroll_bar {
+  animation: animation 1503ms linear infinite both;
+}
+
+/* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bl%3A1%2Cs%3A%5B%7BT%3A%22c%22%2Ce%3A%22s%22%2Cd%3A1500%2CD%3A3%2Cf%3A%7Bx%3A4%2Cy%3A0.5%7D%2Ct%3A%7Bx%3A0%2Cy%3A0.5%7D%2Cs%3A4%2Cb%3A10%7D%5D%7D */
+
+@keyframes animation { 
+  0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  0.1% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  0.2% { transform: matrix3d(4, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  2% { transform: matrix3d(2.347, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.8% { transform: matrix3d(1.851, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.29% { transform: matrix3d(2.447, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  8.79% { transform: matrix3d(3.513, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  11.29% { transform: matrix3d(4.274, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.79% { transform: matrix3d(4.505, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  18.78% { transform: matrix3d(4.113, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  23.78% { transform: matrix3d(3.881, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.77% { transform: matrix3d(4.028, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  43.76% { transform: matrix3d(3.993, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.75% { transform: matrix3d(4.002, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.74% { transform: matrix3d(4, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.73% { transform: matrix3d(4, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.72% { transform: matrix3d(4, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.71% { transform: matrix3d(4, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { transform: matrix3d(4, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    .scroll_single {
+        position: absolute !important;
+        border: 0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+    }
+
+    
+}

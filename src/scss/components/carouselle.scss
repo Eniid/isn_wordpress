@@ -1,0 +1,34 @@
+.carouselle {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 3rem;
+    width: auto;
+    max-width: 2500px;
+        img {
+            margin: 1rem;
+        }
+    img:hover {
+        transform: scale(1.1);
+        transform-origin: center center;
+        transition: .3s;
+        transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
+        }
+}
+
+.carouselle a {
+    color: rgba(255, 235, 205, 0);
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+    .single_right {
+        max-width: 300px;
+    }
+
+    .single_contner {
+        margin: 0 0 0 20%;
+    }
+    
+}

@@ -1,0 +1,58 @@
+
+
+.container {
+	display: flex;
+	justify-content: flex-end;
+    position: relative;
+    top: -4rem;
+    right: -2rem;
+    font-size: .6rem;
+    img{
+        width: .75rem;
+        height: 0;
+        transition: .5s;
+    }
+    transition: .5s;
+}
+
+.container:hover {
+    img {
+        width: auto;
+        height: .75rem;
+        margin: 0 .5rem ;
+    transition: 1s;
+    }
+    transition: 1s ease-in-out;
+}
+
+
+.tip {
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+
+.tip:after {
+    content: "";
+    display: inline-block;
+    margin: 0 .5rem .15rem .5rem;
+    width: 30px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.48);
+}
+
+.trigger {
+    display: inline;
+}
+
+@media screen and (max-width: 800px) {
+
+    .container {
+        position: absolute !important;
+        border: 0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+    }
+}

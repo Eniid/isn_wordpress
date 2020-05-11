@@ -1,10 +1,13 @@
 .index_button {
-    color: $tc;
-    text-decoration: none;
-    font-family: $hf;
-    padding: 0.5em 0.75em;
+    padding: 0.5rem 0.75rem;
     border: $tc solid 1.5px;
-    font-size: 2em;
+}
+
+.index_button {
+    color: $tc;
+    font-family: $hf;
+    text-decoration: none;
+    font-size: 2rem;
     transition: .2s;
 }
 
@@ -22,8 +25,6 @@
     height: 100vh;
     align-items: center;
     letter-spacing: 0.2em;
-    //margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
-    //transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
 
     div{
         width: 50%;
@@ -33,32 +34,34 @@
 }
 
 
+
+
+//* > 800 px
+
 @media screen and (min-width: 800px) {
 
-.photo_contenaire {
-    position: relative;
-    top: -75px;
-    left: 50px;
+    .photo_contenaire {
+        position: relative;
+        top: -5rem;
+        left: 4rem;
+    }
+    .bibli_contenaire {
+        position: relative;
+        top: 5rem;
+        left: -4rem;
+    }
 }
 
-.bibli_contenaire {
-    position: relative;
-    top: 75px;
-    left: -50px;
-}
 
-}
-
+//* < 800 px
 
 @media screen and (max-width: 800px) {
-
 
     .cta {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        //position: relative;
-        //top : -300px; 
+
         div{
             width: auto;
             font-size: .75rem;
@@ -66,8 +69,6 @@
     }
     .index_button {
         border: $tc solid 1.3px;
-        font-size: 2em;
+        font-size: 2rem;
     }
-
-    
 }

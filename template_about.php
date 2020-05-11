@@ -11,7 +11,7 @@
                     <div>
                         <h2><?php the_title(); ?></h2>
                         <p><?php the_field('add'); ?></p>
-                        <a href="#" class="about_contact-button pages_cta">Nous contacter</span></a>
+                        <a href="contacte/" class="about_contact-button pages_cta">Nous contacter</a>
                     </div>
                 </div>
                 <div class="about_left left">

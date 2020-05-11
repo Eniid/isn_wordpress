@@ -10,46 +10,31 @@
 }
 
 .right {
-    background-color: #EDEDED;
-    max-height: 450px;
     overflow-y: auto;
     width: 50%;
+    min-width: 300px;
     max-width: 600px;
+    max-height: 450px;
     padding: 5rem 3.5rem;
-    font-size: .8rem;
-    color: black;
-    text-align: left;
-
 } 
 
 
 .left {
-    background-color: $bb;
     width: 50%;
     max-width: 600px;
     padding: 5rem 3.5rem;
-    font-size: .8rem;
-    color: black;
-    text-align: left;
+
 }
 
 
 .pages_cta {
     display: inline-block;
-    //background-color: $hc;
     margin : .75rem 0 0 0;
     padding: 1em;
     border: black solid 2px;
-    font-family: $hf;
-    font-size: .7rem;
-    color: black;
-    text-decoration: none;
-    transition: .3s;
+
 }
-.pages_cta:hover {
-    background-color: $hc;
-    transition: .3s;
-}
+
 
 .social img {
     height: 1rem;
@@ -67,14 +52,32 @@
         justify-content: center;
         overflow : auto;
         margin: 0;
-        div {
+        >div {
             width: 85%;
         }
+    }
+
+    .carouselle {
+        min-height: 10rem;
     }
 
     .contact_contner {
         justify-content: start;
     }
 
+    .right {
+        max-height: auto;
+        overflow-y: initial;
+    }
+
+    .about_right {
+        position: relative;
+    top: 3rem;
+    }
+
+    .single_right {
+        position: relative;
+        top: 2rem;
+    }
     
 }

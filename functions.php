@@ -59,7 +59,7 @@ function isn_photo_postype() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 4,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
         'menu_icon'          => 'dashicons-camera',
 
@@ -99,11 +99,46 @@ function isn_bibli_postype() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 5,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
         'menu_icon'          => 'dashicons-book',
 
     );
 
     register_post_type( 'bibliotheque', $args );
+}
+
+
+
+
+//! Supression de menu 
+
+function remove_menu_items() {
+	global $menu;
+	$restricted = array(__('Posts'), __('Comments'));
+	end ($menu);
+	while (prev($menu)) {
+		$value = explode(' ',$menu[key($menu)][0]);
+		if(in_array($value[0] != NULL?$value[0]:"" , $restricted)) {
+			unset($menu[key($menu)]);}
+	}
+}
+add_action('admin_menu', 'remove_menu_items');
+
+
+// Le titre
+function ins_get_title($separator = "|", $left = true) {
+    $separator = ' '.$separator.' ';
+
+    $title = trim(wp_title('', false, 'right'));
+
+    if(!$title) {
+        return get_bloginfo('name');
+    }
+
+    if($left) {
+        return $title.$separator.get_bloginfo('name');
+    } else {
+        return get_bloginfo('name').$separator.$title; 
+    }
 }

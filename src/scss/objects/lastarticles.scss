@@ -1,5 +1,4 @@
 
-
 .latest_articles {
     text-align: center;
     position: fixed;
@@ -18,46 +17,26 @@
 
 .latest_articles_button {
     margin: auto;
-    background-color: $bb;
     display: inline-block;
     padding: 10px 20px;
 
 }
 
-.latest_articles_button a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-size: 0.75em;
-    letter-spacing: 0.25em;
-}
 
 .latest_articles_content {
-    color: black;
-    background-color: $bb2;
-    font-size: 1em;
-    padding: 2em;
     width: 100%;
-    text-align: left;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
 }
 
 .latest_articles_article_preview {
-    background-size: cover;
+    display: inline-block;
     width: 225px;
     height: 100px;
     margin: 10px 0 20px 10px;
-    display: inline-block;
 }
 
-.latest_articles_article_preview:hover {
-    transform: scale(1.1);
-    transform-origin: center center;
-    transition: .3s;
-    transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
-}
 
 
 .latest_articles_article_preview_text {
@@ -67,18 +46,11 @@
         position: relative;
         top : 70px;
         padding : 1.5em;
-        text-decoration: none;
-        color: $tc;
-        font-family: $hf;
-        letter-spacing: 0.1em;
-        font-size: 0.5em;
-        transition: 0.5s;
+
     }
     p {
         position: relative;
         top : 25px;
         padding-left: 1.25em;
-        font-size: 0.9em;
-
     }
 }

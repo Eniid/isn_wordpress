@@ -1,26 +1,23 @@
 
-@media screen and (min-width: 800px) {
-    
     .newsletter {
         position: absolute;
         position: fixed;
-        right: -73px;
-        top : 150px;
         display: flex;
         transition: transform .9s ease-out;
         text-align: left;
+        z-index: 999;
     }
 
     .newsletter:hover {
         transform: translateX(-300px);
     }
 
+
     .newsletter_button {
         background-color: $bb;
         display: inline-block;
         padding: 10px 20px;
         transform: rotate(-90deg);
-        letter-spacing: 0.2em;
         margin: 0;
     }
 
@@ -32,16 +29,16 @@
         font-size: 0.75em;
     }
 
+
     .newsletter_block {
         color: black;
         background-color: $bb2;
         position: absolute;
         font-size: 1em;
         padding: 2em;
-        top : -73px;
-        left: 115px;
         width: 250px;
     }
+
 
     .newsletter_block form {
         padding: 20px 0;
@@ -54,6 +51,26 @@
         width: 150px;
     }
 
+
+@media screen and (min-width: 800px) {
+    
+    .newsletter {
+        right: -73px;
+        top : 150px;
+    }
+
+
+    .newsletter_button {
+        letter-spacing: 0.2em;
+    }
+
+
+    .newsletter_block {
+        top : -73px;
+        left: 115px;
+    }
+
+
 }
 
 
@@ -63,55 +80,23 @@
 
 
 .newsletter {
-    position: absolute;
-    position: fixed;
+
     right: -50px;
     top: 150px;
-    display: flex;
-    transition: transform .9s ease-out;
+
 }
 
-.newsletter:hover {
-    transform: translateX(-300px);
-}
 
-.newsletter_button {
-    background-color: $bb;
-    display: inline-block;
-    padding: 10px 20px;
-    transform: rotate(-90deg);
-    margin: 0;
-}
 
 .newsletter_button a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    text-transform: uppercase;
     font-size: 0.60em;
 }
 
 .newsletter_block {
-    color: black;
-    background-color: $bb2;
-    position: absolute;
-    font-size: 1em;
-    padding: 2em;
     top : -49px;
     left: 92px;
-    width: 250px;
 }
 
-.newsletter_block form {
-    padding: 20px 0;
-}
-
-.newsletter_block input {
-    padding: 1.55em 0.7em;
-    border: $hc solid 2px;
-    font-size: 0.5em;
-    width: 150px;
-}
 
 
 }

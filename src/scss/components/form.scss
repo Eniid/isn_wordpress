@@ -1,27 +1,33 @@
-
 .contact_right input{
     display: block;
     padding: 0 .5rem;
+    margin-bottom: 1rem;
     width: 65%;
     height: 1.5rem;
     border: black 1px solid;
     box-shadow: 7px 3px 4px -3px rgba(0,0,0,0.16);
-    margin-bottom: 1rem;
-
 }
+
 
 .contact_right textarea{
     display: block;
-    line-height: .75rem;
     padding: .5rem .5rem;
-    border: black 1px solid;
-    box-shadow: 7px 3px 4px -3px rgba(0,0,0,0.16);
     width: 100%;
+    border: black 1px solid;
 }
+
+.contact_right textarea{
+    box-shadow: 7px 3px 4px -3px rgba(0,0,0,0.16);
+    line-height: .75rem;
+}
+
 
 .contact_right button{
     display: block;
     margin-top: 1rem;
     position: static;
+}
+
+.contact_right button{
     background-color: rgba(255, 0, 0, 0);
 }
