@@ -2,6 +2,6 @@
 
 <?php wp_footer(); ?> 
 
-<script src="dist/app.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/dist/app.js"></script>
 </body>
 </html>

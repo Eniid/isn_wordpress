@@ -3,13 +3,16 @@
     background-color: $bb;
 }
 
-.latest_articles_button a {
+.latest_articles_button {
     text-decoration: none;
     color: black;
     padding: 10px 20px;
     text-transform: uppercase;
     font-size: 0.75em;
     letter-spacing: 0.25em;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
 }
 
 .latest_articles_content {
@@ -18,6 +21,8 @@
     font-size: 1em;
     padding: 2em;
     text-align: left;
+    transition: .5s ease-in-out;
+
 }
 
 
@@ -33,7 +38,7 @@
 }
 
 
-.latest_articles_article_preview_text {
+.latest_articles_content {
     
     a {
         text-decoration: none;
@@ -47,3 +52,41 @@
         font-size: 0.9em;
     }
 }
+
+.latest_articles_article_preview_text h2 {
+    position: relative;
+    top: 100px;
+    padding: 0 0 0 .5rem;
+    text-decoration: none;
+    color: $tc;
+    font-family: $hf;
+    letter-spacing: 0.1rem;
+    font-size: .60rem;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+.latest_articles_tcheck:checked ~ .latest_articles_button > .checked  {
+    display: block;
+}
+
+.latest_articles_tcheck:not(:checked) ~ .latest_articles_button > .not_checked  {
+    display: block;
+}
+
+.latest_articles_tcheck:checked ~ .latest_articles_button {
+    transform: translateY(-200px);
+}
+
+.latest_articles_tcheck:checked ~ .latest_articles_content {
+    transform: translateY(-200px);
+}
+
+.latest_articles_tcheck{
+    opacity: 0;
+}
+

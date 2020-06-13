@@ -20,7 +20,9 @@
     <title><?= ins_get_title(',', false) ?></title>
 
 </head>
-<body>
+<body class="no-js">
+    <input type="checkbox" name="" id="lightbox">
+    <div class="lightbox"><label for="lightbox" class="lightbox_button">Fermer</label><div class="lightboxContainer"></div></div>
     <h1><span class="hl">L'</span><span class="hi">image</span><span class="hs">sans</span><span class="hn">nom</span></h1>
 
 
@@ -28,13 +30,12 @@
     <?php wp_nav_menu(); ?>
 
     <div class="newsletter">
-        <div class="newsletter_button">
-            <a href="#"> newsletter</a>
-        </div>
+        <input class="newsletter_tcheck" type="checkbox" id="news">
+        <label for="news" class="newsletter_button"><span class="not_checked">newsletter</span><span class="checked">close</span> </label>
         <div class="newsletter_block">
+            
             <p>Inscrivez-vous à notre newsletter pour recevoir toutes les informations sur nos prochaines expositions.</p>
-            <form action="#">
-                <input type="text" id="newsletter_email" name="newsletter_email" placeholder="votre e-mail (ex : nom@gmail.com)"> <button>Envoyé</button><div class="border"></div>
-            </form>
+            <?php echo do_shortcode( '[contact-form-7 id="161" title="newsletter"]' ); ?>
+
         </div>
     </div>

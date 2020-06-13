@@ -21,19 +21,25 @@
                         </div>
                 </div>
                         <?php 
-                        $images = get_field('gallerie_photo');
+                        $images = get_field('gallerie-Photo');
                         if( $images ): ?>
-                                        <div class="signle_left left carouselle">
+                                        <div class="signle_left left carouselle revers_scrool">
                                         <div>
-                                <?php foreach( $images as $image ): ?>
+                                        <?php 
+                        $video = get_field('video');
+                        if( $video ): ?>
+                                                <iframe width="200" height="150" src="<?php the_field('video'); ?>" frameborder="0" class="youtube" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <?php endif; ?>
+                                        <?php foreach( $images as $image ): ?>
                                         <a href="<?php echo esc_url($image['url']); ?>" target="_blank" rel="noopener">
-                                                <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                <img src="<?php echo esc_url($image['sizes']['medium']); ?>" class="lightbox_image" alt="<?php echo esc_attr($image['alt']); ?>" />
                                         </a>
                                 <?php endforeach; ?>
                                 </div>
                 </div>
                         <?php endif; ?>
                 </article>
+
 
         <?php endwhile; endif;?>
         <div class="scroll scroll_single">
@@ -44,5 +50,3 @@
 </div>
 
     <?php get_footer() ?>
-</body>
-</html>

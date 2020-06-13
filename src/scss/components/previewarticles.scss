@@ -21,17 +21,27 @@
     opacity: 1;
     transition: .3s;
 }
+@media screen and (max-width: 800px) {
+    .preview_article_content{
+        opacity: 1;
+        transition: .3s;
+    }
+
+    }
 
 
-
-.preview_article_title a {
+.preview_article_contener a {
     text-decoration: none;
     font-family: $hf;
     color: #fff;
-    //margin-top: 15rem;
+}
+
+.preview_article_contener a:first-child {
+    margin-left: 20%;
 }
 
 .preview_article_content p {
     font-size: .8rem;
+    font-family: $tf;
 }
 

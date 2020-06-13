@@ -12,18 +12,23 @@
     </div>
 
     <div class="latest_articles">
-        <div class="latest_articles_button">
-            <a href="#">Articles récents</a>
-        </div>
+    <input class="latest_articles_tcheck" type="checkbox" id="last">
+    <label for="last" class="latest_articles_button"><span class="not_checked">Articles récents</span><span class="checked">close</span> </label>
+
         <div class="latest_articles_content">
 
-            <?php $loop = new WP_Query( array( 'post_type' => 'photographie', 'bibliotheque' => '10' ) ); ?>
+
+        
+
+            <?php $loop = new WP_Query( array( 'post_type' => array('photographie', 'bibliotheque'), 'posts_per_page'  => '10' ) ); ?>
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <a href="<?php the_permalink(); ?>"  title="Voir le projet <?= get_the_title(); ?>">
                 <article class="latest_articles_article_preview" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');"> 
                 <div class="latest_articles_article_preview_text">
-                        <h2><a href="<?php the_permalink(); ?>"  title="Voir le projet <?= get_the_title(); ?>"><?php the_title(); ?></a></h2>
+                        <h2><?php the_title(); ?></h2>
                 </div>
             </article>
+            </a>
             <?php endwhile; wp_reset_query(); ?>
         </div>
         

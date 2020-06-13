@@ -2,7 +2,7 @@
 .scroll {
     position: fixed;
     right: 5rem;
-    top: 70%;
+    top: 75%;
     font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -11,7 +11,7 @@
 .scroll_bar {
     position: fixed;
     right: 0rem;
-    top: 71%;   
+    top: 76%;   
     width: 1.5rem;
     height: .4rem;
     background-color: #fff;
@@ -63,4 +63,21 @@
     }
 
     
+}
+
+
+
+@media screen and (max-width: 490px) {
+
+  .scroll {
+      position: absolute !important;
+      border: 0 !important;
+      height: 1px !important;
+      width: 1px !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+  }
+
+  
 }

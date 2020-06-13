@@ -8,10 +8,28 @@
         z-index: 999;
     }
 
-    .newsletter:hover {
-        transform: translateX(-300px);
+
+
+    
+
+    .wpcf7-form {
+        position: relative;
     }
 
+
+    .newsletter .wpcf7-submit {
+        position: absolute;
+        top: 0;
+        top: 2.55rem;
+        right: 1.5rem;
+        padding: .6rem 1em;
+        background-color: #FFE200;
+        border: #FFE200 solid 2px;
+    }
+
+    .wpcf7-submit:focus {
+        outline: none;
+    }
 
     .newsletter_button {
         background-color: $bb;
@@ -19,6 +37,15 @@
         padding: 10px 20px;
         transform: rotate(-90deg);
         margin: 0;
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        cursor: pointer;
+        transition: .6s ease-in-out;
+        width: 100px;
+        text-align: center;
     }
 
     .newsletter_button a {
@@ -27,6 +54,7 @@
         padding: 10px 20px;
         text-transform: uppercase;
         font-size: 0.75em;
+        
     }
 
 
@@ -37,25 +65,57 @@
         font-size: 1em;
         padding: 2em;
         width: 250px;
+        transition: .6s ease-in-out;
+
     }
 
 
     .newsletter_block form {
-        padding: 20px 0;
+        padding: 20px 0 0 0;
     }
 
-    .newsletter_block input {
-        padding: 1.55em 0.7em;
-        border: $hc solid 2px;
-        font-size: 0.5em;
+    .wpcf7-validates-as-email {
+        position: relative;
+        padding: .7em 0.7em;
+        border: #FFE200 solid 2px;
         width: 150px;
+    }
+    .wpcf7-validates-as-email:focus {
+        outline: none;
+    }
+
+    .newsletter .wpcf7-response-output {
+            margin: 0 0.5em 0;
+    }
+
+    .checked {
+        display: none;
+    }
+
+    .not_checked {
+        display: none;
+    }
+
+    .newsletter_tcheck:checked ~ .newsletter_button > .checked  {
+        display: block;
+    }
+
+    .newsletter_tcheck:not(:checked) ~ .newsletter_button > .not_checked  {
+        display: block;
+    }
+
+    .newsletter_tcheck:checked ~ .newsletter_block {
+        transform: translateX(-300px);
+    }
+    .newsletter_tcheck:checked ~ .newsletter_button {
+        transform: translateX(-300.8px) rotate(-90deg);
     }
 
 
 @media screen and (min-width: 800px) {
     
     .newsletter {
-        right: -73px;
+        right: -53px;
         top : 150px;
     }
 
@@ -66,8 +126,8 @@
 
 
     .newsletter_block {
-        top : -73px;
-        left: 115px;
+        top : -50px;
+        left: 110px;
     }
 
 
@@ -80,12 +140,9 @@
 
 
 .newsletter {
-
     right: -50px;
     top: 150px;
-
 }
-
 
 
 .newsletter_button a {
@@ -94,9 +151,24 @@
 
 .newsletter_block {
     top : -49px;
-    left: 92px;
+    left: 110px;
 }
 
 
 
+.newsletter_tcheck:checked ~ .newsletter_block {
+    transform: translateX(-295px);
+}
+.newsletter_tcheck:checked ~ .newsletter_button {
+    transform: translateX(-295px) rotate(-90deg);
+
+}
+
+}
+
+
+.newsletter_tcheck{
+background: none;
+outline: none;
+opacity: 0;
 }

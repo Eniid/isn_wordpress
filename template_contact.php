@@ -7,15 +7,7 @@
             <section class="contact_contner pages_contner">
                 <div class="contact_right right">
                         <h2>Nous Ecrire</h2>
-                        <form action="#">
-                            <label for="name">Nom </label>
-                            <input type="text" name="name" id="name" required>
-                            <label for="mail">E-mail </label>
-                            <input type="text" name="mail" id="mail" required>
-                            <label for="message">Message </label>
-                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                            <button class="contact_send-button pages_cta">Envoyer</button>
-                        </form>
+                        <?php echo do_shortcode( '[contact-form-7 id="157" title="Contact form 1"]' ); ?>
                 </div>
                 <div class="contact_left left">
                     <section itemscope itemtype="https://schema.org/Organization">
@@ -36,5 +28,3 @@
 
 
     <?php get_footer() ?>
-</body>
-</html>

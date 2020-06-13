@@ -1,9 +1,8 @@
-.carouselle {
+.single_contner .carouselle {
     overflow: auto;
     white-space: nowrap;
     padding: 3rem;
     width: auto;
-    max-width: 2500px;
         img {
             margin: 1rem;
         }
@@ -15,13 +14,21 @@
         }
 }
 
-.carouselle a {
+.single_contner .carouselle a {
     color: rgba(255, 235, 205, 0);
 }
 
-
+.youtube {
+    position: relative;
+    top: -15px;
+    margin-right: 1rem;
+}
 
 @media screen and (min-width: 800px) {
+
+    .single_contner .carouselle {
+        max-width: 2500px;
+    }
 
     .single_right {
         max-width: 300px;
@@ -32,3 +39,23 @@
     }
     
 }
+
+@media screen and (max-width: 800px) {
+
+
+    .single_contner .carouselle {
+        padding-left: 22rem;
+    }
+
+
+
+}
+
+
+.signle_left {
+    img {
+        height: 150px;
+    }
+}
+
+
