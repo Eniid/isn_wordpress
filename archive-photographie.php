@@ -11,7 +11,7 @@
             <article class="preview_article" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');"> 
                 <div class="preview_article_content">
 
-                        <h2 class="preview_article_title"><?php the_title(); ?></h2>
+                        <h2 class="preview_article_title" role="heading" aria-level="2"><?php the_title(); ?></h2>
                         <?php the_excerpt(); ?>
 
                 </div>
@@ -29,5 +29,3 @@
 
 
     <?php get_footer() ?>
-</body>
-</html>

@@ -67,12 +67,17 @@
 
     .right {
         max-height: auto;
-        overflow-y: initial;
+        overflow-y: auto;
     }
 
     .about_right {
         position: relative;
-    top: 3rem;
+        overflow-y: initial;
+        top: 3rem;
+    }
+
+    .contact_right {
+        overflow-y: initial;
     }
 
     .single_right {

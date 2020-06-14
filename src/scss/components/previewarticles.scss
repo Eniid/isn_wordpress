@@ -1,13 +1,9 @@
-
-
-
 .preview_article:hover {
     transform: scale(1.1);
     transform-origin: center center;
-    transition: .3s;
     transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
+    transition: .3s;
 }
-
 
 
 .preview_article_content {
@@ -16,19 +12,18 @@
     transition: .3s;
 }
 
-
 .preview_article_content:hover {
     opacity: 1;
     transition: .3s;
 }
+
+
 @media screen and (max-width: 800px) {
     .preview_article_content{
         opacity: 1;
         transition: .3s;
     }
-
-    }
-
+}
 
 .preview_article_contener a {
     text-decoration: none;

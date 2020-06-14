@@ -7,12 +7,12 @@
     top: -4rem;
     right: -2rem;
     font-size: .6rem;
+    transition: .5s;
     img{
         width: .75rem;
         height: 0;
         transition: .5s;
     }
-    transition: .5s;
 }
 
 .container:hover {

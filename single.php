@@ -15,7 +15,7 @@
                                         </div>
                                 </div>
 
-                        <h2><?php the_title(); ?></h2>
+                        <h2 role="heading" aria-level="2"><?php the_title(); ?></h2>
                         <div>
                         <?php the_content(); ?>
                         </div>

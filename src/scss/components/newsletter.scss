@@ -8,8 +8,6 @@
         z-index: 999;
     }
 
-
-
     
 
     .wpcf7-form {
@@ -32,41 +30,46 @@
     }
 
     .newsletter_button {
-        background-color: $bb;
         display: inline-block;
         padding: 10px 20px;
-        transform: rotate(-90deg);
         margin: 0;
-        text-decoration: none;
-        color: black;
         padding: 10px 20px;
-        text-transform: uppercase;
-        font-size: 0.75em;
-        cursor: pointer;
-        transition: .6s ease-in-out;
         width: 100px;
+    }
+
+    .newsletter_button {
+        background-color: $bb;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+        font-size: 0.75em;
         text-align: center;
     }
 
+    .newsletter_button {
+        transform: rotate(-90deg);
+        transition: .6s ease-in-out;
+    }
+
     .newsletter_button a {
-        text-decoration: none;
-        color: black;
         padding: 10px 20px;
         text-transform: uppercase;
+        text-decoration: none;
+        color: black;
         font-size: 0.75em;
         
     }
 
 
     .newsletter_block {
-        color: black;
-        background-color: $bb2;
         position: absolute;
-        font-size: 1em;
         padding: 2em;
         width: 250px;
+        background-color: $bb2;
+        color: black;
+        font-size: 1em;
         transition: .6s ease-in-out;
-
     }
 
 
@@ -77,8 +80,8 @@
     .wpcf7-validates-as-email {
         position: relative;
         padding: .7em 0.7em;
-        border: #FFE200 solid 2px;
         width: 150px;
+        border: #FFE200 solid 2px;
     }
     .wpcf7-validates-as-email:focus {
         outline: none;
